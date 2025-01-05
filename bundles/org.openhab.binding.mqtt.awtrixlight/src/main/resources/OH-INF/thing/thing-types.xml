@@ -31,11 +31,14 @@
 			<channel id="indicator1" typeId="indicator"/>
 			<channel id="indicator2" typeId="indicator"/>
 			<channel id="indicator3" typeId="indicator"/>
+			<channel id="sound" typeId="sound"/>
+			<channel id="rtttl" typeId="rtttl"/>
 		</channels>
 		<properties>
 			<property name="vendor"></property>
 			<property name="firmware"></property>
 			<property name="uniqueId"></property>
+			<property name="thingTypeVersion">1</property>
 		</properties>
 		<representation-property>uniqueId</representation-property>
 		<config-description-ref uri="thing-type:mqtt:awtrixclock"/>
@@ -545,6 +548,26 @@
 			<tag>Control</tag>
 		</tags>
 		<state pattern="%.0f %unit%"></state>
+	</channel-type>
+
+	<channel-type id="sound">
+		<item-type>String</item-type>
+		<label>Play melody from MELODIES folder</label>
+		<description>Name of the melody file in the clocks MELODIES folder</description>
+		<category>text</category>
+		<tags>
+			<tag>Point</tag>
+		</tags>
+	</channel-type>
+
+	<channel-type id="rtttl">
+		<item-type>String</item-type>
+		<label>Play RTTTL</label>
+		<description>Ring Tone Text Transfer Language (RTTTL) compliant sound string</description>
+		<category>text</category>
+		<tags>
+			<tag>Point</tag>
+		</tags>
 	</channel-type>
 
 </thing:thing-descriptions>

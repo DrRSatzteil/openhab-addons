@@ -175,6 +175,24 @@ public class AwtrixActions implements ThingActions {
         }
     }
 
+    @RuleAction(label = "Play RTTTL", description = "Plays the melody provided in RTTTL format")
+    public void playRtttl(String rtttl) {
+        AwtrixLightBridgeHandler localHandler = this.handler;
+        if (localHandler != null) {
+            localHandler.playRtttl(rtttl);
+        }
+    }
+
+    public static void playRtttl(@Nullable ThingActions actions, @Nullable String rtttl) {
+        if (actions instanceof AwtrixActions) {
+            if (rtttl != null) {
+                ((AwtrixActions) actions).playRtttl(rtttl);
+            }
+        } else {
+            throw new IllegalArgumentException("Instance is not an AwtrixActions class.");
+        }
+    }
+
     @RuleAction(label = "Show Notification", description = "Shows a default notification with an icon")
     public void showNotification(String message, String icon) {
         AwtrixLightBridgeHandler localHandler = this.handler;

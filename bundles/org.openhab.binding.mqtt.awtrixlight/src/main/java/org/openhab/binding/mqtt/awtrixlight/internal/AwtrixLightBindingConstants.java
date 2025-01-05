@@ -65,6 +65,7 @@ public class AwtrixLightBindingConstants {
     public static final String TOPIC_NOTIFY = "/notify";
     public static final String TOPIC_POWER = "/power";
     public static final String TOPIC_REBOOT = "/reboot";
+    public static final String TOPIC_RTTTL = "/rtttl";
     public static final String TOPIC_SCREEN = "/screen";
     public static final String TOPIC_SEND_SCREEN = "/sendscreen";
     public static final String TOPIC_SETTINGS = "/settings";
@@ -106,8 +107,6 @@ public class AwtrixLightBindingConstants {
     public static final String FIELD_BRIDGE_SET_BLOCK_KEYS = "BLOCKN";
     public static final String FIELD_BRIDGE_SET_BRIGHTNESS = "BRI";
     public static final String FIELD_BRIDGE_SET_DISPLAY = "MATP";
-
-    // TODO: Validate that it really mutes
     public static final String FIELD_BRIDGE_SET_MUTE = "SOUND";
     public static final String FIELD_BRIDGE_SET_SCROLL_SPEED = "SSPEED";
     public static final String FIELD_BRIDGE_SET_TEXT_COLOR = "TCOL";
@@ -136,7 +135,9 @@ public class AwtrixLightBindingConstants {
     public static final String CHANNEL_LOW_BATTERY = "low-battery";
     public static final String CHANNEL_LUX = "lux";
     public static final String CHANNEL_RSSI = "rssi";
+    public static final String CHANNEL_RTTTL = "rtttl";
     public static final String CHANNEL_SCREEN = "screen";
+    public static final String CHANNEL_SOUND = "sound";
     public static final String CHANNEL_TEMPERATURE = "temperature";
 
     // App Channels
